@@ -1,8 +1,48 @@
 package Game;
 
 //TODO implement take damage once common hero/enemy code has been moved here
-public class Unit {
+public class Unit implements TakesDamage{
     // This is the class for all living things, hero and enemy
+    int maxHealth;
+    int maxMana;
+    int level = 1;
+    String name;
+    // 0 = beginner, 1 = mage, 2 = warrior, 3 = thief, 4 = priest //
+    byte job = 2;
+    String jobTitle;
+
+    int currentHealth;
+    int currentMana;
+
+
+    //TODO remove or update once you do the weapon class
+
+    int attack;
+    int defense;
+
+
+    //TODO find out where these interface methods are supposed to go
+
+    public int gainHp(){
+
+    }
+
+    public int gainMana(){
+
+    }
+
+    public int loseHp(){
+
+    }
+
+    public int loseMana(){
+
+    }
+
+    public void die(){
+
+    }
+
 
 
     //TODO take out a lot of the code from both hero and enemy

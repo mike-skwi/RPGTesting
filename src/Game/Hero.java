@@ -2,14 +2,6 @@ package Game;
 import java.util.Map;
 
 public class Hero extends Unit{
-    int maxHealth;
-    int maxMana;
-    int level = 1;
-    String name;
-    // 0 = beginner, 1 = mage, 2 = warrior, 3 = thief, 4 = priest //
-    byte job = 2;
-    String jobTitle;
-
     // Each weapon in the game is a different number
     //TODO use another map to link the item number --> item name
     // Example: 123, Steel Halberd
@@ -28,18 +20,15 @@ public class Hero extends Unit{
     //  equipped.put("testing","testing");
 
 
-    int currentHealth;
-    int currentMana;
     int exp = 0;
     int expUntilNextLevel = 20;
 
 
     //TODO remove these once you implement weapon class
     // These are just for testing purposes
-    int attack;
-    int defense;
 
 
+    //TODO add the parameters for hero
     public Hero(String name){
         this.name = name;
         if (job == 0)
@@ -86,17 +75,18 @@ public class Hero extends Unit{
         {
             System.out.println("Invalid class option");
         }
-
-        //TODO remove or update once you do the weapon class
-        this.attack = 40;
-        this.defense = 15;
     }
     public Hero(){
-        this.name = "Mistake : ) ";
+        this.name = "Mistake :^) ";
     }
 
     public void display(){
-        System.out.println("Name: " + this.name + "\nLevel: " + this.level);
+        System.out.println("Name: " + this.name + "\nLevel: " + this.level;
+        System.out.println("HP: " + this.currentHealth + "/" + this.maxHealth);
+        System.out.println("MP: " + this.currentMana + "/" + this.maxMana);
+    }
+    public void advanceDisplay(){
+        //TODO write a method that shows all the stats, not just the HP/MP
     }
 
 
