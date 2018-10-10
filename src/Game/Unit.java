@@ -20,6 +20,9 @@ public class Unit implements TakesDamage{
     int attack;
     int defense;
 
+    //TODO make damage calculation
+    //TODO implement stats in some way
+
 
     //TODO find out where these interface methods are supposed to go
 
