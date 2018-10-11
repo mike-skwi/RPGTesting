@@ -1,5 +1,5 @@
 package Game;
-
+/*
 public class Weapon extends Hero{
 
     //TODO assign numbers to a weapon name with a map/dictionary
@@ -9,3 +9,5 @@ public class Weapon extends Hero{
 
 
 }
+
+*/

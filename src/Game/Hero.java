@@ -1,7 +1,7 @@
 package Game;
 import java.util.Map;
 
-public abstract class Hero extends Unit{
+public class Hero extends Unit {
 
     // Each weapon in the game is a different number
     //TODO use another map to link the item number --> item name
@@ -97,5 +97,43 @@ public abstract class Hero extends Unit{
         //TODO Use the strategy pattern to level based on class choice
 
     }
+
+
+    public void gainHp(int gainedHp){
+        this.currentHealth = this.currentHealth + gainedHp;
+        if (this.currentHealth > this.maxHealth){
+            this.currentHealth = this.maxHealth;
+        }
+        System.out.println("Your hp is now: " + this.currentHealth);
+    }
+
+    public void gainMana(int gainedMana) {
+        this.currentMana = this.currentMana + gainedMana;
+        if (this.currentMana > this.maxMana){
+            this.currentMana = this.maxMana;
+        }
+        System.out.println("Your mana is now: " + this.currentMana);
+    }
+
+    public void loseHp(int lostHealth){
+        this.currentHealth = this.currentHealth - lostHealth;
+        if (this.currentHealth <= 0 ){
+            die();
+        }
+        System.out.println("Your hp is now: " + this.currentHealth);
+    }
+
+    public void loseMana(int lostMana){
+        this.currentHealth = this.currentHealth - lostMana;
+        if (this.currentHealth > this.maxHealth){
+            this.currentHealth = this.maxHealth;
+        }
+        System.out.println("Your hp is now: " + this.currentHealth);
+    }
+
+    public void die(){
+        System.out.println("AHH");
+    }
+
 
 }
