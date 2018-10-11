@@ -1,7 +1,7 @@
 package Game;
 
 //TODO implement take damage once common hero/enemy code has been moved here
-public class Unit implements TakesDamage{
+public abstract class Unit implements TakesDamage{
     // This is the class for all living things, hero and enemy
     int maxHealth;
     int maxMana;
@@ -26,7 +26,7 @@ public class Unit implements TakesDamage{
 
     //TODO find out where these interface methods are supposed to go
 
-    public int gainHp(int gainedHp){
+    public void gainHp(int gainedHp){
         this.currentHealth = this.currentHealth + gainedHp;
         if (this.currentHealth > this.maxHealth){
             this.currentHealth = this.maxHealth;
@@ -54,7 +54,11 @@ public class Unit implements TakesDamage{
 
     }
 
-
+    public void display(){
+        System.out.println("Name: " + this.name + "\nLevel: " + this.level);
+        System.out.println("HP: " + this.currentHealth + "/" + this.maxHealth);
+        System.out.println("MP: " + this.currentMana + "/" + this.maxMana);
+    }
 
     //TODO take out a lot of the code from both hero and enemy
     // Have them both extend this class

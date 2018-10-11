@@ -12,6 +12,8 @@ public class Main {
         Hero newCharacter = new Hero("Mowshe");
         newCharacter.display();
 
+        Enemy newEnemy = new Enemy(2,1,"thing");
+
 
         // Enemies in succession will be an array of all the enemies the player has to fight in a row
         Enemy[] firstBattle = new Enemy[3];
@@ -19,6 +21,8 @@ public class Main {
         firstBattle[1] = new Enemy(2,2);
         firstBattle[2] = new Enemy(2,2);
 
+
+        Battle.fight(newCharacter,newEnemy);
 
 
     }

@@ -1,7 +1,8 @@
 package Game;
 import java.util.Map;
 
-public class Hero extends Unit{
+public abstract class Hero extends Unit{
+
     // Each weapon in the game is a different number
     //TODO use another map to link the item number --> item name
     // Example: 123, Steel Halberd
@@ -80,11 +81,7 @@ public class Hero extends Unit{
         this.name = "Mistake :^) ";
     }
 
-    public void display(){
-        System.out.println("Name: " + this.name + "\nLevel: " + this.level;
-        System.out.println("HP: " + this.currentHealth + "/" + this.maxHealth);
-        System.out.println("MP: " + this.currentMana + "/" + this.maxMana);
-    }
+
     public void advanceDisplay(){
         //TODO write a method that shows all the stats, not just the HP/MP
     }
