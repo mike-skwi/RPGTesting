@@ -58,7 +58,30 @@ public abstract class Unit implements TakesDamage{
     // Have them both extend this class
 
 
+    ////////////////////////////////
+    //TODO battle methods ?
 
+    public void block(){
+
+    }
+    public void attack(){
+
+    }
+    public void castSpell(String spell){
+
+    }
+
+    //May change the data type of this from item to something else
+    //Can be used in either battle or non battle
+    public void useItem(String item){
+
+    }
+    ////////////////////////////////
+    //TODO outside of battle methods
+
+    public void equip(String item){
+
+    }
 
 
 }
