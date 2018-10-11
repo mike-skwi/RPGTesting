@@ -26,19 +26,27 @@ public class Unit implements TakesDamage{
 
     //TODO find out where these interface methods are supposed to go
 
-    public int gainHp(){
+    public int gainHp(int gainedHp){
+        this.currentHealth = this.currentHealth + gainedHp;
+        if (this.currentHealth > this.maxHealth){
+            this.currentHealth = this.maxHealth;
+        }
+        System.out.println("Your hp is now: " + this.currentHealth);
+    }
+
+    public void gainMana(int gainedMana){
+        this.currentMana = this.currentMana + gainedMana;
+        if (this.currentMana > this.maxMana){
+            this.currentMana = this.maxMana;
+        }
+        System.out.println("Your mana is now: " + this.currentMana);
+    }
+
+    public void loseHp(){
 
     }
 
-    public int gainMana(){
-
-    }
-
-    public int loseHp(){
-
-    }
-
-    public int loseMana(){
+    public void loseMana(){
 
     }
 

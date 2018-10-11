@@ -13,5 +13,13 @@ public class Main {
         newCharacter.display();
 
 
+        // Enemies in succession will be an array of all the enemies the player has to fight in a row
+        Enemy[] firstBattle = new Enemy[3];
+        firstBattle[0] = new Enemy(2,2);
+        firstBattle[1] = new Enemy(2,2);
+        firstBattle[2] = new Enemy(2,2);
+
+
+
     }
 }
