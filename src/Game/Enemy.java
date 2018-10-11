@@ -1,6 +1,7 @@
 package Game;
 
 public class Enemy {
+
     String droppedOnDeath;
 
     //TODO add equipped items

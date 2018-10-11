@@ -109,7 +109,8 @@ public class Hero extends Unit{
         if (this.currentHealth > this.maxHealth){
             this.currentHealth = this.maxHealth;
         }
-        System.out.println("Your mana is now: " + this.currentMana);
+        System.out.println(this.name + " gained " + gainedHp + " health");
+        System.out.println("Your HP is now: " + this.currentHealth);
     }
 
     public void gainMana(int gainedMana) {
@@ -117,6 +118,7 @@ public class Hero extends Unit{
         if (this.currentMana > this.maxMana){
             this.currentMana = this.maxMana;
         }
+        System.out.println(this.name + " gained " + gainedMana + " mana");
         System.out.println("Your mana is now: " + this.currentMana);
     }
 
@@ -125,15 +127,17 @@ public class Hero extends Unit{
         if (this.currentHealth <= 0 ){
             die();
         }
+        System.out.println(this.name + " took " + lostHealth + " damage");
         System.out.println("Your hp is now: " + this.currentHealth);
     }
 
     public void loseMana(int lostMana){
-        this.currentHealth = this.currentHealth - lostMana;
-        if (this.currentHealth > this.maxHealth){
-            this.currentHealth = this.maxHealth;
+        this.currentMana = this.currentMana - lostMana;
+        if (lostMana > this.currentMana){
+            this.currentMana = 0;
         }
-        System.out.println("Your hp is now: " + this.currentHealth);
+        System.out.println(this.name + " used " + lostMana + " mana");
+        System.out.println("Your mana is now: " + this.currentMana);
     }
 
 

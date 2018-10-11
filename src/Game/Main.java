@@ -20,9 +20,14 @@ public class Main {
         firstBattle[1] = new Enemy(2,"Magician","Gobo");
         firstBattle[2] = new Enemy(2,"Thief","Gobo");
 
+        //Battle is broken rn due to enemy being broken
+        //Battle.fight(newCharacter,newEnemy);
 
-        Battle.fight(newCharacter,newEnemy);
-
+        newCharacter.display();
+        newCharacter.loseHp(50);
+        newCharacter.gainHp(999);
+        newCharacter.loseMana(9000);
+        newCharacter.gainMana(9000);
 
     }
 }

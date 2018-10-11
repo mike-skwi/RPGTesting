@@ -10,7 +10,7 @@ public abstract class Unit implements TakesDamage{
 
     boolean alive = true;
 
-    int level = 1;
+    int level;
     String name;
     String job;
     String jobTitle;
