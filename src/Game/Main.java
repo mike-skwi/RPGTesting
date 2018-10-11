@@ -9,10 +9,9 @@ public class Main {
 
         //TODO Make a scanner or something so that user can input character options
 
-        Hero newCharacter = new Hero("Mowshe");
-        newCharacter.display();
+        Hero newCharacter = new Hero("Mowshe", "Rogue");
 
-        Enemy newEnemy = new Enemy(2,"Cleric","thing");
+        Enemy newEnemy = new Enemy(2,"Rogue","thing");
 
 
         // Enemies in succession will be an array of all the enemies the player has to fight in a row

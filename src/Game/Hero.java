@@ -30,8 +30,9 @@ public class Hero extends Unit{
 
     //TODO remove 'job title' since class is a string now
     //TODO add the parameters for hero
-    public Hero(String name){
+    public Hero(String name, String job){
         this.name = name;
+        //These job strings DO NOT ignore CasE
         if (job == "Beginner")
         {
             this.job = "Beginner";
@@ -76,6 +77,8 @@ public class Hero extends Unit{
         {
             System.out.println("Invalid class option");
         }
+        this.currentHealth = this.maxHealth;
+        this.currentMana = this.maxMana;
     }
     public Hero(){
         this.name = "Mistake :^) ";
@@ -97,6 +100,9 @@ public class Hero extends Unit{
         //TODO Use the strategy pattern to level based on class choice
 
     }
+
+    //TODO find out why I have to write a seperate one of these TakesDamage methods in
+    // hero and another version in enemy
 
     public void gainHp(int gainedHp){
         this.currentHealth = this.currentMana + gainedHp;

@@ -30,6 +30,7 @@ public abstract class Unit implements TakesDamage{
 
     public void display(){
         System.out.println("Name: " + this.name + "\nLevel: " + this.level);
+        System.out.println("Class: " + this.job);
         System.out.println("HP: " + this.currentHealth + "/" + this.maxHealth);
         System.out.println("MP: " + this.currentMana + "/" + this.maxMana);
     }
