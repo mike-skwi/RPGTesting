@@ -12,8 +12,7 @@ public abstract class Unit implements TakesDamage{
 
     int level = 1;
     String name;
-    // 0 = beginner, 1 = mage, 2 = warrior, 3 = thief, 4 = priest //
-    byte job = 2;
+    String job;
     String jobTitle;
 
 
@@ -29,19 +28,29 @@ public abstract class Unit implements TakesDamage{
 
     //TODO find out where these interface methods are supposed to go
 
-    public abstract void gainHp();
-
-    public abstract void gainMana();
-    public abstract void loseHp();
-
-    public abstract void loseMana();
-
-    public abstract void die();
-
     public void display(){
         System.out.println("Name: " + this.name + "\nLevel: " + this.level);
         System.out.println("HP: " + this.currentHealth + "/" + this.maxHealth);
         System.out.println("MP: " + this.currentMana + "/" + this.maxMana);
+    }
+
+    @Override
+    public void gainHp() {
+
+    }
+
+    @Override
+    public void gainMana(){
+
+    }
+
+    @Override
+    public void loseHp(){
+
+    }
+    @Override
+    public void loseMana() {
+
     }
 
     //TODO take out a lot of the code from both hero and enemy

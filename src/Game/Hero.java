@@ -1,7 +1,7 @@
 package Game;
 import java.util.Map;
 
-public class Hero extends Unit {
+public class Hero extends Unit{
 
     // Each weapon in the game is a different number
     //TODO use another map to link the item number --> item name
@@ -28,45 +28,45 @@ public class Hero extends Unit {
     //TODO remove these once you implement weapon class
     // These are just for testing purposes
 
-
+    //TODO remove 'job title' since class is a string now
     //TODO add the parameters for hero
     public Hero(String name){
         this.name = name;
-        if (job == 0)
+        if (job == "Beginner")
         {
-            this.job = 0;
+            this.job = "Beginner";
             this.jobTitle = "Beginner";
             this.maxHealth = 100;
             this.maxMana = 20;
 
         }
-        else if (job == 1)
+        else if (job == "Magician")
         {
-            this.job = 1;
+            this.job = "Magician";
             this.jobTitle = "Magician";
             this.maxHealth = 80;
             this.maxMana = 120;
 
         }
-        else if (job == 2)
+        else if (job == "Fighter")
         {
-            this.job = 2;
+            this.job = "Fighter";
             this.jobTitle = "Fighter";
             this.maxHealth = 150;
             this.maxMana = 30;
 
         }
-        else if (job == 3)
+        else if (job == "Rogue")
         {
-            this.job = 0;
+            this.job = "Rogue";
             this.jobTitle = "Rogue";
             this.maxHealth = 70;
             this.maxMana = 50;
 
         }
-        else if (job == 4)
+        else if (job == "Cleric")
         {
-            this.job = 0;
+            this.job = "Cleric";
             this.jobTitle = "Cleric";
             this.maxHealth = 80;
             this.maxMana = 100;
@@ -98,13 +98,12 @@ public class Hero extends Unit {
 
     }
 
-
     public void gainHp(int gainedHp){
-        this.currentHealth = this.currentHealth + gainedHp;
+        this.currentHealth = this.currentMana + gainedHp;
         if (this.currentHealth > this.maxHealth){
             this.currentHealth = this.maxHealth;
         }
-        System.out.println("Your hp is now: " + this.currentHealth);
+        System.out.println("Your mana is now: " + this.currentMana);
     }
 
     public void gainMana(int gainedMana) {
@@ -130,6 +129,7 @@ public class Hero extends Unit {
         }
         System.out.println("Your hp is now: " + this.currentHealth);
     }
+
 
     public void die(){
         System.out.println("AHH");
