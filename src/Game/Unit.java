@@ -25,7 +25,20 @@ public abstract class Unit implements TakesDamage{
 
     int rightArmIntegrity = 100, leftArmIntegrity = 100;
     int rightLegIntegrity = 100, leftLegIntegrity = 100;
-    int
+    int neckIntegrity = 100;
+    int backIntegrity = 100;
+
+
+    // Status Ailments: :
+    // At the beginning of the turn, there will be a check to see what type of ailments the user has
+    boolean dead = false;
+    boolean poisoned = false;
+    boolean paralyzed = false;
+    boolean feared = false;
+    boolean bleeding = false;
+    boolean onFire = false;
+
+
 
 
 
