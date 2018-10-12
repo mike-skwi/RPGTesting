@@ -10,12 +10,8 @@ public class Battle {
     }
 
     public static void fight(Hero player, Enemy opponent){
-        player.display();
-        opponent.display();
-
-
-
-
+        player.displayName();
+        opponent.displayName();
 
     }
 

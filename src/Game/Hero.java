@@ -79,6 +79,7 @@ public class Hero extends Unit{
         }
         this.currentHealth = this.maxHealth;
         this.currentMana = this.maxMana;
+        this.level = 1;
     }
     public Hero(){
         this.name = "Mistake :^) ";

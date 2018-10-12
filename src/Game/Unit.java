@@ -4,17 +4,17 @@ import java.util.Dictionary;
 //TODO implement take damage once common hero/enemy code has been moved here
 public abstract class Unit implements TakesDamage{
     // This is the class for all living things, hero and enemy
-    int currentHealth;
-    int currentMana;
-    int maxHealth;
-    int maxMana;
+    public int currentHealth;
+    public  int currentMana;
+    public  int maxHealth;
+    public  int maxMana;
 
     boolean alive = true;
 
-    int level;
-    String name;
-    String job;
-    String jobTitle;
+    protected int level;
+    protected String name;
+    protected String job;
+    protected String jobTitle;
 
 
     // Body parts: :
@@ -23,15 +23,14 @@ public abstract class Unit implements TakesDamage{
     // Fighters will be able to choose what part of the body they want to attack
     // Or they can just do a more powerful swing not really aiming for anything in particular
 
-    int rightArmIntegrity = 100, leftArmIntegrity = 100;
-    int rightLegIntegrity = 100, leftLegIntegrity = 100;
-    int neckIntegrity = 100;
-    int backIntegrity = 100;
-
+    protected int rightArmIntegrity = 100, leftArmIntegrity = 100;
+    protected int rightLegIntegrity = 100, leftLegIntegrity = 100;
+    protected int neckIntegrity = 100;
+    protected int backIntegrity = 100;
+    protected int shoulderIntegrity = 100;
 
     // Status Ailments: :
     // At the beginning of the turn, there will be a check to see what type of ailments the user has
-    boolean dead = false;
     boolean poisoned = false;
     boolean paralyzed = false;
     boolean feared = false;
@@ -39,16 +38,21 @@ public abstract class Unit implements TakesDamage{
     boolean onFire = false;
 
 
+    // Elemental Weaknesses: :
+    // tbh I dont even want to start doing this now.
+    // pretty self explanatory though
 
 
 
+    // Equipped weapons/items
+    public String leftHand;
+    public String rightHand;
 
-
-
+    // Attack and Defense Stats
     //TODO remove or update once you do the weapon class
-
-    int attack;
-    int defense;
+    //TODO add different types of attacks. For now, they can just be basic
+    public int attack;
+    public int defense;
 
     //TODO make damage calculation
     //TODO implement stats in some way
@@ -63,16 +67,18 @@ public abstract class Unit implements TakesDamage{
         System.out.println("MP: " + this.currentMana + "/" + this.maxMana);
     }
 
+    public void displayName(){
+        System.out.println("Name: " + this.name + " Level: " + this.level + " Job: " + this.job );
+    }
+
     @Override
     public void gainHp() {
 
     }
-
     @Override
     public void gainMana(){
 
     }
-
     @Override
     public void loseHp(){
 
