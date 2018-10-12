@@ -1,4 +1,5 @@
 package Game;
+import java.util.Dictionary;
 
 //TODO implement take damage once common hero/enemy code has been moved here
 public abstract class Unit implements TakesDamage{
@@ -14,6 +15,20 @@ public abstract class Unit implements TakesDamage{
     String name;
     String job;
     String jobTitle;
+
+
+    // Body parts: :
+    // Ideally, certain moves damage limbs of either user, enemy, or both
+    // ie: You can throw you back out if you swing improperly
+    // Fighters will be able to choose what part of the body they want to attack
+    // Or they can just do a more powerful swing not really aiming for anything in particular
+
+    int rightArmIntegrity = 100, leftArmIntegrity = 100;
+    int rightLegIntegrity = 100, leftLegIntegrity = 100;
+    int
+
+
+
 
 
 
