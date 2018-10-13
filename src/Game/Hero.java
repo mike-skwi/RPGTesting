@@ -101,7 +101,7 @@ public class Hero extends Unit{
         //TODO Use the strategy pattern to level based on class choice
 
     }
-
+    // AHHHHHH
     //TODO find out why I have to write a seperate one of these TakesDamage methods in
     // hero and another version in enemy
 
